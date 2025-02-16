@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{colorart}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{quiver}
+
+\def\maa{\mathcal}
+\def\mab{\mathfrak}
+\def\mac{\mathbb}
+\def\rar{\rightarrow}
+\def\tx{\times}
+\def\oo{\circ}
+\def\ra{\rightarrow}
+\def\sm{\setminus}
+\def\ga{\gamma}
+\def\R{\mac{R}}
+
+\title{\Huge Idempotent elements, Spectrum of a ring and Decomposition into product of rings}
+
+\author{Raakesh M}
+\email{mr21ms116@iiserkol.ac.in}
+\date{updated on \today}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{theorem}
+	Given a commutative ring $A$ with identity, the following statements are equivalent:
+
+	\begin{itemize}
+		\item Spec$(A)$ is disconnected.
+		\item $A = A_1 \times A_2$, where $A_1$ and $A_2$ are non-zero rings.
+		\item There exists $e \in A$, such that $e^2 = e$ and $e \neq 0,1$.
+	\end{itemize}
+
+\end{theorem}
+
+The above theorem implies that idempotent elements only exist in product rings, which leads to a natural question, given a commutative ring $A$ with non trivial idempotent elements ($e^2=e, e \neq 0,1$), can $A$ be decomposed as,
+
+\[ A = \prod_{i \in I} A_i \]
+
+for some indexing set $I$, finite or not, with each $A_i$ having no idempotent element other than $0$ and $1$?\\
+
+Let us first consider an example, let $A = A_1 \times \cdots \times A_n$, where each $A_i$ is an integral domain (idempotent => zero divisors), prime ideals of $A$ are of the form $A_1 \times \cdots \times A_{i-1} \times P_i \times A_{i+1} \times \cdots \times A_n$, where $P_i$ is a prime ideal of $A_i$. It can be easily noticed that each connected component of Spec$(A)$ is of the form $V( A_1 \times \cdots \times A_{i-1} \times (0) \times A_{i+1} \times \cdots \times A_n)$.\\
+
+(where $V(E) = \{P \in \text{Spec}(A) : E \subset P\}$ is an arbitary closed set in Spec$(A)$).\\
+
+Although the above example suggests that, each connected component of the spectrum corresponds to a ring, and that the product of the collection of all of these rings gives us the original ring. But that suggestion is perhaps not true.\\ 
+
+The problem arises when one works with direct product of commutative rings with an infinite index, unlike the finite case the form of the prime ideals are far more complicated$^\text{[1]}$ than that of the finite case.\\
+
+The above theorem still suggests that, even in the infinite case, the commutative ring can be decomposed into product of 2 non-trivial rings, perhaps with certain extra conditions on the ring, one would be able to fully decompose some of these commutative rings completely into product of rings where each ring has no idempotent element (other than 0 and 1).\\
+
+I am interested in trying to find if there are any conditions on rings with idempotent elements so that, we are able to prove that it can expressed as a product of rings without idempotent elements or in general trying to studying the properties of spectrum of product of rings, with an infinite index.\\
+
+
+$^\text{[1]}$: \href{https://arxiv.org/abs/2208.08828}{https://arxiv.org/abs/2009.03069}
+
+
+\end{document}
